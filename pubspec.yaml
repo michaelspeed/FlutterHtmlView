@@ -4,17 +4,17 @@ version: 0.5.12
 author: Karthik Ponnam <ponnamkarthik3@gmail.com>
 homepage: https://github.com/PonnamKarthik/FlutterHtmlView
 
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=2.0.0 <2.10.4"
+
 dependencies:
   flutter:
     sdk: flutter
-  flutter_custom_tabs: ^0.6.0
-  html: ^0.13.3+3
-  video_player: 0.10.0+2
-  cached_network_image: ^0.7.0
-
-  flutter_markdown: ^0.2.0
-  html2md: ^0.3.0
-
-environment:
-  sdk: ">=2.0.0-dev.28.0 <3.0.0"
-  flutter: ">=0.1.4 <2.0.0"
+  flutter_custom_tabs: ^1.0.4
+  html: ^0.15.0
+  video_player: ^2.3.0
+  cached_network_image: ^3.2.0
+  url_launcher: ^6.0.20
+  flutter_markdown: ^0.6.10
+  html2md: ^1.2.5

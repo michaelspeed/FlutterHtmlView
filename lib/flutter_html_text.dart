@@ -18,7 +18,7 @@ class HtmlText extends StatelessWidget {
     try {
       await cTab.launch(
         url,
-        option: new cTab.CustomTabsOption(
+        customTabsOption: new cTab.CustomTabsOption(
           toolbarColor: Theme.of(ctx).primaryColor,
           enableDefaultShare: true,
           enableUrlBarHiding: true,

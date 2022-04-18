@@ -30,7 +30,7 @@ class HtmlView extends StatelessWidget {
     if (scrollable) {
       return Markdown(
         data: _htmlMd(data, stylingOptions),
-        onTapLink: (url) {
+        onTapLink: (text, url, title) {
           if (url.startsWith("http://") || url.startsWith("https://")) {
             _launchURL(url);
           } else {
@@ -46,7 +46,7 @@ class HtmlView extends StatelessWidget {
         child: MarkdownBody(
           // Doesn't use a list view, hence no scrolling.
           data: _htmlMd(data, stylingOptions),
-          onTapLink: (url) {
+          onTapLink: (text, url, title) {
             if (url.startsWith("http://") || url.startsWith("https://")) {
               _launchURL(url);
             } else {
@@ -71,7 +71,7 @@ class HtmlView extends StatelessWidget {
     try {
       await cTab.launch(
         url,
-        option: new cTab.CustomTabsOption(
+        customTabsOption: new cTab.CustomTabsOption(
           toolbarColor: Theme.of(ctx).primaryColor,
           enableDefaultShare: true,
           enableUrlBarHiding: true,

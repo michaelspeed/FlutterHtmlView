@@ -46,7 +46,7 @@ class _VideoPlayPauseState extends State<VideoPlayPause> {
       new GestureDetector(
         child: new VideoPlayer(controller),
         onTap: () {
-          if (!controller.value.initialized) {
+          if (!controller.value.isInitialized) {
             return;
           }
           if (controller.value.isPlaying) {
@@ -223,8 +223,8 @@ class AspectRatioVideoState extends State<AspectRatioVideo> {
       if (!mounted) {
         return;
       }
-      if (initialized != controller.value.initialized) {
-        initialized = controller.value.initialized;
+      if (initialized != controller.value.isInitialized) {
+        initialized = controller.value.isInitialized;
         setState(() {});
       }
     };
